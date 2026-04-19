@@ -18,9 +18,12 @@ def start(
 ) -> None:
     from capturelive.core.service_loop import ServiceLoop
 
+ codex/task-title-3iiu10
+
     import cv2
     from capturelive.vision.motion_engine import MotionEngine
 
+ main
     cfgm = ConfigManager()
     cfg = cfgm.load()
     cfg["preview"] = not no_preview
@@ -113,7 +116,12 @@ def calibrate() -> None:
 
 @app.command()
 def config(
+ codex/task-title-3iiu10
+    show: bool = typer.Option(False, "--show", help="Mostra o JSON atual"),
+    no_show: bool = typer.Option(False, "--no-show", help="Não imprime JSON no terminal"),
+
     show: bool = typer.Option(True, "--show/--no-show", help="Mostra o JSON atual"),
+ main
     edit: bool = typer.Option(False, "--edit", help="Abre o arquivo de config no editor padrão"),
     reset: bool = typer.Option(False, "--reset", help="Restaura configuração padrão"),
 ) -> None:
@@ -125,7 +133,12 @@ def config(
         import os
 
         os.startfile(str(cfgm.config_path))  # type: ignore[attr-defined]
+ codex/task-title-3iiu10
+    should_show = show or (not no_show and not edit)
+    if should_show:
+
     if show:
+ main
         typer.echo(cfgm.config_path.read_text(encoding="utf-8"))
 
 
