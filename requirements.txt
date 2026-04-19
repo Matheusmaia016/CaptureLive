@@ -1,0 +1,7 @@
+opencv-python==4.10.0.84
+mediapipe==0.10.14
+typer==0.12.5
+pynput==1.7.7
+pyautogui==0.9.54
+pywin32==306
+psutil==5.9.8

@@ -1,0 +1,44 @@
+{
+  "camera_index": 0,
+  "preview": true,
+  "show_overlay": true,
+  "minimize_logs": false,
+  "smoothing_alpha": 0.35,
+  "debounce_frames": 3,
+  "hysteresis_enter": 0.12,
+  "hysteresis_exit": 0.08,
+  "neutral_pose": {
+    "torso_x": 0.5,
+    "torso_y": 0.5,
+    "torso_depth": 0.5
+  },
+  "sensitivity": {
+    "lean_x": 0.11,
+    "lean_y": 0.11,
+    "lean_depth": 0.09,
+    "crouch_threshold": 0.13,
+    "jump_arm_raise_threshold": 0.16,
+    "left_click_fist_threshold": 0.085,
+    "right_click_open_palm_threshold": 0.12
+  },
+  "minecraft_detection": {
+    "window_title_keywords": [
+      "minecraft",
+      "java edition",
+      "lunar client",
+      "badlion"
+    ],
+    "process_names": [
+      "javaw.exe",
+      "Minecraft.Windows.exe",
+      "bedrock_server.exe"
+    ],
+    "poll_interval_ms": 250
+  },
+  "output": {
+    "enable_keyboard": true,
+    "enable_mouse": true,
+    "right_click_cooldown_ms": 500,
+    "left_click_cooldown_ms": 250
+  }
+}

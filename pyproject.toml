@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capturelive"
+version = "0.1.0"
+description = "Assistente residente por gestos para Minecraft no Windows"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "CaptureLive"}]
+dependencies = [
+  "opencv-python==4.10.0.84",
+  "mediapipe==0.10.14",
+  "typer==0.12.5",
+  "pynput==1.7.7",
+  "pyautogui==0.9.54",
+  "pywin32==306",
+  "psutil==5.9.8"
+]
+
+[project.scripts]
+capturelive = "capturelive.cli.main:app"
+
+[tool.setuptools.packages.find]
+include = ["capturelive*"]
